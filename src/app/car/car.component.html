@@ -1,0 +1,10 @@
+<div>
+  <button (click)='this.logout()'>logout</button>
+  <h3>token</h3>
+    <p>Token: <span>{{ (this.getAuthToken() | async) }}</span></p>
+    <p>auth: <span>{{ (this.checkAuth() | async)?.isAuthenticated }}</span></p>
+    <p>getIdToken: <span>{{ (this.getIdToken() | async) }}</span></p>
+    <p>getRefreshToken: <span>{{ (this.getRefreshToken() | async) }}</span></p>
+    <li *ngFor="let item of cars">{{item}}</li>
+  <button (click)='this.getCars()'>Cars</button>
+</div>
